@@ -3,6 +3,11 @@ from solver import solve_puzzle
 
 app = Flask(__name__)
 
+# ---- CORS support ----
+from flask_cors import CORS
+CORS(app)
+# ----------------------
+
 @app.route('/solve-puzzle', methods=['POST'])
 def solve():
     try:
